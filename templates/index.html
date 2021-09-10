@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Product Recommendation System - Arjun Succena</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+<link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Poppins:300,500&amp;display=swap'>
+<style>
+body {
+	background-color: #e6e9ed;
+	font-family: monospace;
+}
+
+main {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	background-color: #f5f7fa;
+	width: 100%;
+	max-width: 400px;
+	padding: 20px;
+	transform: translate(-50%, -50%);
+}
+
+input {
+	background-color: transparent;
+	width: 100%;
+	height: 40px;
+	margin: 0 0 10px 0;
+	padding: 0 12px;
+	border-width: 0 0 2px 0;
+	box-shadow: 0;
+	outline: none;
+	display: block;
+	font-family: inherit;
+}
+
+input:invalid {
+	border-width: 0 0 2px 0;
+	outline: none;
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+input:invalid:not(:placeholder-shown) {
+	border-color: #ed5565;
+}
+
+input:valid {
+	border-color: #a0d468;
+}
+
+button {
+	background-color: #434a54;
+	color: #f5f7fa;
+	width: 100%;
+	height: 40px;
+	border: 0;
+	display: block;
+	font-family: inherit;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: #656d78;
+}
+</style>
+</head>
+<body>
+<main>
+  <form action="{{ url_for('main')}}" method="post">
+    <input type="text" name="username" placeholder="username" required>
+    <button type="submit">submit</button>
+  </form>
+</main>
+
+</body>
+</html>
